@@ -154,7 +154,7 @@ void crackzip::crackpw()
 //get next password in dictionary
 bool crackzip::get_next_pw()
 {
-    return getline(dict_f,pw);
+    return static_cast<bool>(getline(dict_f,pw));
 }
 
 //use unzip to check if password is correct
